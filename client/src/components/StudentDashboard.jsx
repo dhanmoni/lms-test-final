@@ -192,7 +192,7 @@ function StudentDashboard() {
                 !app.academicLeave &&
                 !app.withDrawn &&
                 app.approveLevel > 0 &&
-                app.approveLevel < 4
+                app.approveLevel < 5
               ) {
                 showApplyBtn[0] = false;
                 return (

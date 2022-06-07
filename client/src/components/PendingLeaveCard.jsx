@@ -88,7 +88,7 @@ const PendingLeaveCard = ({ application, user, showWitdrawBtn }) => {
           ),
       },
     ];
-  } else if (!dswReq && !user.projectGuide.id) {
+  } else if (!dswReq && !user.projectGuide?.id) {
     steps = [
       {
         label: (
@@ -146,7 +146,7 @@ const PendingLeaveCard = ({ application, user, showWitdrawBtn }) => {
           ),
       },
     ];
-  } else if (!dswReq && user.projectGuide.id) {
+  } else if (!dswReq && user.projectGuide?.id) {
     steps = [
       {
         label: (
@@ -292,7 +292,9 @@ const PendingLeaveCard = ({ application, user, showWitdrawBtn }) => {
       },
       {
         label:
-          approveLevel == 5 || approveLevel == 6 || (approveLevel == 0 && approvels.length > 4) ? (
+          approveLevel == 5 ||
+          approveLevel == 6 ||
+          (approveLevel == 0 && approvels.length > 4) ? (
             <Typography sx={{ fontWeight: "bold", color: "green" }}>
               Approved by DSW
             </Typography>
@@ -330,7 +332,10 @@ const PendingLeaveCard = ({ application, user, showWitdrawBtn }) => {
       },
       {
         label:
-          approveLevel == 2 || approveLevel == 3 || approveLevel == 4 ? (
+          approveLevel == 2 ||
+          approveLevel == 3 ||
+          approveLevel == 4 ||
+          approveLevel == 5 ? (
             <Typography sx={{ fontWeight: "bold", color: "green" }}>
               Approved by Local Guardian
             </Typography>
