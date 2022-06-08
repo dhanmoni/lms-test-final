@@ -301,9 +301,8 @@ function PendingLeaves() {
                   }
                   // if project guide exists then show him the card
                   if (
-                    studentInfo[0].projectGuide?.id &&
                     ((user.roles[0] === "PROJECT_GUIDE" &&
-                      user._id === studentInfo[0].projectGuide?.id) ||
+                      user._id === studentInfo[0]?.projectGuide?.id) ||
                       user.roles[0] == "SYSTEM_ADMIN") &&
                     !app.withDrawn
                   ) {
